@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="expense-tracker">
+      <h1 class="expense-header">Expense Tracker</h1>
+      <div class="add-expense">
+        <div class="section-header">Add Expense</div>
+
+        <form class="expense-form">
+          <div class="form-group">
+            <div class="input-group">
+              <label for="amount">Amount</label>
+              <input
+                id="amount"
+                class="amount-input"
+                placeholder="Enter amount"
+                type="number"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="description">Description</label>
+              <input
+                id="description"
+                class="description-input"
+                placeholder="Enter description"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="category">Category</label>
+              <select id="category" class="category-select">
+                <option value="" disabled selected>Select category</option>
+                <option value="groceries">Groceries</option>
+                <option value="transportation">Transportation</option>
+                <option value="bills">Bills</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="miscellaneous">Miscellaneous</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="add-expense-btn">Add Expense</button>
+        </form>
+      </div>
+
+      <div class="expenses-list">
+        <div class="section-header">Expenses</div>
+        <table class="expenses-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="4">No Data Found</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./tracker.js"></script>
+  </body>
+</html>
